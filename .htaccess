@@ -1,0 +1,19 @@
+#mo chuc nang rewrite (bat chuc nang)
+RewriteEngine ON
+#dinh nghia thu muc goc cua web
+RewriteBase /
+#Bat dau viet luat URL
+RewriteRule ^(.*)-([0-9]*).html$ detail.php?id=$2
+RewriteRule ^danh-muc/(.*)-([0-9]*)$ cat.php?id=$2
+RewriteRule ^chi-tiet-p=([0-9]*)$ index.php?page=$1
+RewriteRule ^tin-tuc$ index.php
+RewriteRule ^danh-muc/(.*)-([0-9]*)/p=([0-9]*)$ cat.php?id=$2&page=$3
+RewriteRule ^search$ search.php
+RewriteRule ^them-tin$ add.php
+RewriteRule ^dang-ki$ dk.php
+RewriteRule ^dang-nhap$ login.php
+RewriteRule ^tin-tuc-p=([0-9]*)$ index.php?page=$1
+RewriteRule ^danh-muc/(.*)-([0-9]*)/p=([0-9]*)$ cat.php?id=$2&page=$3
+
+
+
